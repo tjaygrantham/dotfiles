@@ -25,7 +25,7 @@
 - shell:
     - [git submodule update --init --recursive, Installing Submodules]
     - [
-        curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher,
+        fish -c "curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher",
         Installing fisher,
       ]
-    - [fisher install ilancosman/tide, Installing tide]
+    - [fish -c "fisher install ilancosman/tide", Installing tide]
