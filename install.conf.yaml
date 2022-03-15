@@ -14,9 +14,18 @@
     ~/.zprofile: zsh/zprofile
     ~/.zsh_plugins: zsh/zsh_plugins
 
+    #fish
+    ~/.config/fish/fish_variables: fish/fish_variables
+    ~/.config/fish/functions/vsc.fish: fish/functions/vsc.fish
+
     # git
     ~/.gitconfig: git/gitconfig
     ~/.config/git/ignore: git/gitignore
 
 - shell:
     - [git submodule update --init --recursive, Installing Submodules]
+    - [
+        curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher,
+        Installing fisher,
+      ]
+    - [fisher install ilancosman/tide, Installing tide]
