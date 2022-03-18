@@ -17,6 +17,9 @@
     #fish
     ~/.config/fish/fish_variables: fish/fish_variables
     ~/.config/fish/functions/vsc.fish: fish/functions/vsc.fish
+    ~/.config/fish/functions/ls.fish: fish/functions/ls.fish
+    ~/.config/fish/functions/clear.fish: fish/functions/clear.fish
+    ~/.config/fish/functions/clear.applescript: fish/functions/clear.applescript
 
     # git
     ~/.gitconfig: git/gitconfig
