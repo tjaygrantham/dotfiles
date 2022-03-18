@@ -32,3 +32,4 @@
         Installing fisher,
       ]
     - [fish -c "fisher install ilancosman/tide", Installing tide]
+    - [fish -c "fisher install oh-my-fish/plugin-cd", Installing cd plugin]
