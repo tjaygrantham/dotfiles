@@ -15,6 +15,7 @@
     ~/.zsh_plugins: zsh/zsh_plugins
 
     #fish
+    ~/.config/fish/config.fish: fish/config.fish
     ~/.config/fish/fish_variables: fish/fish_variables
     ~/.config/fish/functions/vsc.fish: fish/functions/vsc.fish
     ~/.config/fish/functions/ls.fish: fish/functions/ls.fish
@@ -33,3 +34,4 @@
       ]
     - [fish -c "fisher install ilancosman/tide", Installing tide]
     - [fish -c "fisher install oh-my-fish/plugin-cd", Installing cd plugin]
+    - [fish -c "fisher install jethrokuan/z", Installing z plugin]
