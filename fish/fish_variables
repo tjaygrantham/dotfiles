@@ -1,6 +1,5 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
-SETUVAR --path PATH:/usr/local/bin\x1e/usr/bin\x1e/usr/sbin\x1e/sbin\x1e/Library/Apple/usr/bin
 SETUVAR VIRTUAL_ENV_DISABLE_PROMPT:true
 SETUVAR ZO_CMD:zo
 SETUVAR Z_CMD:z
