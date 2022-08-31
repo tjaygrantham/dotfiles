@@ -6,3 +6,5 @@ if status is-interactive
         set -x GHIDRA_INSTALL_DIR (eval "brew --prefix")/Caskroom/ghidra/*/*
     end
 end
+fish_add_path $HOME/.cargo/bin
+fish_add_path $HOME/.spicetify
