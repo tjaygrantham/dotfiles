@@ -6,7 +6,7 @@
     shell:
       stderr: true
 
-- clean: ["~"]
+- clean: ['~']
 
 - link:
     # zsh
@@ -33,6 +33,12 @@
         fish -c "curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher",
         Installing fisher,
       ]
-    - [fish -c "fisher install ilancosman/tide@v5.3", Installing tide]
-    - [fish -c "fisher install oh-my-fish/plugin-cd", Installing cd plugin]
+    - [
+        fish -c "fisher list | grep "ilancosman/tide" || fisher install ilancosman/tide@v5.3",
+        Installing tide,
+      ]
+    - [
+        fish -c "fisher list | grep "oh-my-fish/plugin-cd" || fisher install oh-my-fish/plugin-cd",
+        Installing cd plugin,
+      ]
     - [fish -c "fisher install jethrokuan/z", Installing z plugin]
