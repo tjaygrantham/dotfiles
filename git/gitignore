@@ -34,7 +34,7 @@ node_modules
 
 # Theos
 .theos
-packages
+/packages
 
 # Dragonmake
 .dragon
