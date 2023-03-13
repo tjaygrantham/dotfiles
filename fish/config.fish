@@ -8,11 +8,11 @@ if test $status = 0
     set -x GHIDRA_INSTALL_DIR (eval "brew --prefix")/Caskroom/ghidra/*/*
     set -x VITASDK /usr/local/vitasdk
     set -x PSPDEV /usr/local/pspdev
-    if test -d /opt/MonkeyDev
-        set -x MonkeyDevPath /opt/MonkeyDev
-        set -x MonkeyDevDeviceIP localhost
-        set -x MonkeyDevDevicePort 2222
-        fish_add_path /opt/MonkeyDev/bin
-    end
+end
+if test -d /opt/MonkeyDev
+    set -x MonkeyDevPath /opt/MonkeyDev
+    set -x MonkeyDevDeviceIP localhost
+    set -x MonkeyDevDevicePort 2222
+    fish_add_path /opt/MonkeyDev/bin
 end
 fish_add_path $HOME/.cargo/bin
