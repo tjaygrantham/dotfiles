@@ -1,0 +1,4 @@
+command -v exa > /dev/null
+if [[ $? -eq 0 ]]; then
+  alias ls="exa -l --icons --git"
+fi

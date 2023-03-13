@@ -9,9 +9,17 @@
 - clean: ['~']
 
 - link:
+    # profile
+    ~/.profile: profile
+
+    # bash
+    ~/.bashrc: bash/bashrc
+    ~/.bash_aliases: bash/bash_aliases
+    ~/.bash_profile: profile
+
     # zsh
     ~/.zshrc: zsh/zshrc
-    ~/.zprofile: zsh/zprofile
+    ~/.zprofile: profile
     ~/.zsh_plugins: zsh/zsh_plugins
 
     #fish

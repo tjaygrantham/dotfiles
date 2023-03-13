@@ -4,14 +4,29 @@
 
 if [[ "$OSTYPE" == darwin* ]]; then
   export BROWSER='open'
-  export PATH=/opt/homebrew/bin:$PATH
-  export HOMEBREW_CASK_OPTS="--no-quarantine"
-  export GHIDRA_INSTALL_DIR=$(echo $(brew --prefix)/Caskroom/ghidra/*/*)
-  export PATH="$(brew --prefix make)/libexec/gnubin:$PATH"
-  export MonkeyDevPath=/opt/MonkeyDev
-  export MonkeyDevDeviceIP=
-  export PATH=/opt/MonkeyDev/bin:$PATH
+  export OO_PS4_TOOLCHAIN=/opt/OpenOrbis-PS4-Toolchain
+  command -v brew > /dev/null
+  if [[ $? -eq 0 ]]; then
+    export PATH=/opt/homebrew/bin:$PATH
+    export HOMEBREW_CASK_OPTS="--no-quarantine"
+    export GHIDRA_INSTALL_DIR=$(echo $(brew --prefix)/Caskroom/ghidra/*/*)
+    export PATH="$(brew --prefix make)/libexec/gnubin:$PATH"
+  fi
+  if [[ -d /opt/MonkeyDev ]]; then
+    export MonkeyDevPath=/opt/MonkeyDev
+    export MonkeyDevDeviceIP=localhost
+    export MonkeyDevDevicePort=2222
+    export PATH=/opt/MonkeyDev/bin:$PATH
+  fi
 fi
+
+#
+# SDKs
+#
+
+export GOLDHEN_SDK=$HOME/GoldHEN_Plugins_SDK
+export VITASDK=/usr/local/vitasdk
+export PSPDEV=/usr/local/pspdev
 
 #
 # Editors
@@ -80,3 +95,7 @@ export THEOS=$HOME/theos
 #
 
 export PATH=$HOME/.cargo/bin:$PATH
+
+#
+# Aliases
+#

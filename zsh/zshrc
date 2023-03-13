@@ -4,3 +4,4 @@ zstyle :prompt:pure:path color cyan
 zstyle :prompt:pure:prompt:success color green
 zstyle ':prompt:pure:git:*' color magenta
 zstyle :prompt:pure:virtualenv color yellow
+source $HOME/.bash_aliases
