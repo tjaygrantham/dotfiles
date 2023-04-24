@@ -3,6 +3,6 @@ function ls
   if test $status = 0
     exa -l --icons --git $argv
   else
-    env ls -l $argv
+    env ls -l --color=auto $argv
   end
 end
