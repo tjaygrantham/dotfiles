@@ -1,4 +1,11 @@
 command -v exa > /dev/null
 if [[ $? -eq 0 ]]; then
   alias ls="exa -l --icons --git"
+else
+  alias ls="ls -l"
+fi
+
+command -v codium > /dev/null
+if [[ $? -eq 0 ]]; then
+  alias code="codium"
 fi

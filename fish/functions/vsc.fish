@@ -1,3 +1,3 @@
-function vsc --wraps='code .' --description 'alias vsc=code .'
+function vsc
   code . $argv; 
 end

@@ -1,8 +1,8 @@
-function code --wraps='codium' --description 'alias code=codium'
-  command -vq code
+function code
+  command -vq codium
   if test $status = 0
-    env code $argv
-  else
     codium $argv
+  else
+    env code $argv
   end
 end

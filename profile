@@ -5,9 +5,9 @@
 if [[ "$OSTYPE" == darwin* ]]; then
   export BROWSER='open'
   export OO_PS4_TOOLCHAIN=/opt/OpenOrbis-PS4-Toolchain
+  export PATH=/opt/homebrew/bin:$PATH
   command -v brew > /dev/null
   if [[ $? -eq 0 ]]; then
-    export PATH=/opt/homebrew/bin:$PATH
     export HOMEBREW_CASK_OPTS="--no-quarantine"
     export GHIDRA_INSTALL_DIR=$(echo $(brew --prefix)/Caskroom/ghidra/*/*)
     export PATH="$(brew --prefix make)/libexec/gnubin:$PATH"
