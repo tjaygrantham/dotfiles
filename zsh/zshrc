@@ -1,4 +1,4 @@
-source /usr/local/share/antidote/antidote.zsh
+source $(brew --prefix)/share/antidote/antidote.zsh
 antidote bundle < ~/.zsh_plugins > ~/.zsh_plugins.zsh
 source ~/.zsh_plugins.zsh
 zstyle :prompt:pure:path color cyan

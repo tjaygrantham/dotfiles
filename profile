@@ -4,9 +4,11 @@
 
 if [[ "$OSTYPE" == darwin* ]]; then
   export BROWSER='open'
-  export OO_PS4_TOOLCHAIN=/opt/OpenOrbis-PS4-Toolchain
-  export PATH=/opt/homebrew/bin:$PATH
-  command -v brew > /dev/null
+  export PATH=/usr/local/bin:$PATH
+  if [[ $(arch) == "arm64" ]]; then
+    export PATH=/opt/homebrew/bin:$PATH
+  fi
+  command -vq brew
   if [[ $? -eq 0 ]]; then
     export HOMEBREW_CASK_OPTS="--no-quarantine"
     export GHIDRA_INSTALL_DIR=$(echo $(brew --prefix)/Caskroom/ghidra/*/*)
@@ -24,6 +26,7 @@ fi
 # SDKs
 #
 
+export OO_PS4_TOOLCHAIN=$HOME/OpenOrbis-PS4-Toolchain
 export GOLDHEN_SDK=$HOME/GoldHEN_Plugins_SDK
 export VITASDK=/usr/local/vitasdk
 export PSPDEV=/usr/local/pspdev
