@@ -10,6 +10,8 @@ if [[ "$OSTYPE" == darwin* ]]; then
   fi
   command -vq brew
   if [[ $? -eq 0 ]]; then
+    export HOMEBREW_NO_ANALYTICS=1
+    export HOMEBREW_NO_AUTO_UPDATE=1
     export HOMEBREW_CASK_OPTS="--no-quarantine"
     export GHIDRA_INSTALL_DIR=$(echo $(brew --prefix)/Caskroom/ghidra/*/*)
     export PATH="$(brew --prefix make)/libexec/gnubin:$PATH"

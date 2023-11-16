@@ -13,6 +13,8 @@ if test (uname) = Darwin
     end
     command -vq brew
     if test $status = 0
+        set -x HOMEBREW_NO_ANALYTICS 1
+        set -x HOMEBREW_NO_AUTO_UPDATE 1
         set -x HOMEBREW_CASK_OPTS "--no-quarantine"
         set -x GHIDRA_INSTALL_DIR (brew --prefix)/Caskroom/ghidra/*/*
         fish_add_path -m (brew --prefix make)/libexec/gnubin
