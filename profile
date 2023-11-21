@@ -104,3 +104,5 @@ export PATH=$HOME/.cargo/bin:$PATH
 #
 # Aliases
 #
+
+alias clear="clear && printf \"\e[H\e[3J\""
