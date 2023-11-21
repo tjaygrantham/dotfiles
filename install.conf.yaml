@@ -6,7 +6,7 @@
     shell:
       stderr: true
 
-- clean: ['~']
+- clean: ["~"]
 
 - link:
     # profile
@@ -36,6 +36,9 @@
     ~/.gitconfig: git/gitconfig
     ~/.config/git/ignore: git/gitignore
 
+    # kitty
+    ~/.config/kitty/kitty.conf: kitty/kitty.conf
+
 - shell:
     - [git submodule update --init --recursive, Installing Submodules]
     - [
@@ -43,7 +46,7 @@
         Installing fisher,
       ]
     - [
-        fish -c "fisher list | grep "ilancosman/tide" || fisher install ilancosman/tide@v5.3",
+        fish -c "fisher list | grep "ilancosman/tide" || fisher install ilancosman/tide@v5",
         Installing tide,
       ]
     - [
