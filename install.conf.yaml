@@ -39,6 +39,9 @@
     # kitty
     ~/.config/kitty/kitty.conf: kitty/kitty.conf
 
+    # tmux
+    ~/.tmux.conf: tmux/tmux.conf
+
 - shell:
     - [git submodule update --init --recursive, Installing Submodules]
     - [
