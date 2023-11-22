@@ -10,9 +10,11 @@ ohmyzsh/ohmyzsh path:plugins/yarn
 ohmyzsh/ohmyzsh path:plugins/z
 
 mafredri/zsh-async
-sindresorhus/pure
+romkatv/powerlevel10k
+# sindresorhus/pure
 
 MichaelAquilina/zsh-autoswitch-virtualenv
 MichaelAquilina/zsh-you-should-use
 
 zsh-users/zsh-autosuggestions
+zsh-users/zsh-syntax-highlighting

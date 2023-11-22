@@ -9,3 +9,5 @@ command -v codium > /dev/null
 if [[ $? -eq 0 ]]; then
   alias code="codium"
 fi
+
+alias clear="clear && printf \"\e[H\e[3J\""

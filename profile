@@ -8,7 +8,7 @@ if [[ "$OSTYPE" == darwin* ]]; then
   if [[ $(arch) == "arm64" ]]; then
     export PATH=/opt/homebrew/bin:$PATH
   fi
-  command -vq brew
+  command -v brew > /dev/null
   if [[ $? -eq 0 ]]; then
     export HOMEBREW_NO_ANALYTICS=1
     export HOMEBREW_NO_AUTO_UPDATE=1
@@ -56,17 +56,6 @@ fi
 # Ensure path arrays do not contain duplicates.
 typeset -gU cdpath fpath mailpath path
 
-# Set the list of directories that cd searches.
-cdpath=(
-  $cdpath
-)
-
-# Set the list of directories that Zsh searches for programs.
-path=(
-  /usr/local/{bin,sbin}
-  $path
-)
-
 #
 # Less
 #
@@ -104,5 +93,3 @@ export PATH=$HOME/.cargo/bin:$PATH
 #
 # Aliases
 #
-
-alias clear="clear && printf \"\e[H\e[3J\""

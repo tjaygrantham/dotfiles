@@ -20,7 +20,8 @@
     # zsh
     ~/.zshrc: zsh/zshrc
     ~/.zprofile: profile
-    ~/.zsh_plugins: zsh/zsh_plugins
+    ~/.zsh_plugins.txt: zsh/zsh_plugins.txt
+    ~/.p10k.zsh: zsh/p10k.zsh
 
     #fish
     ~/.config/fish/config.fish: fish/config.fish
