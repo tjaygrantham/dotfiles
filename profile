@@ -6,11 +6,14 @@ if [[ "$OSTYPE" == darwin* ]]; then
   export BROWSER='open'
   if [[ $(arch) == arm64 ]]; then
     export PATH="/opt/homebrew/bin:$PATH"
+  else
+    export PYENV_ROOT="$HOME/.pyenv-x86"
   fi
   command -v brew > /dev/null
   if [[ $? -eq 0 ]]; then
     export HOMEBREW_CASK_OPTS="--no-quarantine"
     export GHIDRA_INSTALL_DIR=$(echo $(brew --prefix)/Caskroom/ghidra/*/*)
+    export PATH="$(brew --prefix make)/libexec/gnubin:$PATH"
   fi
   if [[ -d /opt/MonkeyDev ]]; then
     export MonkeyDevPath=/opt/MonkeyDev
@@ -26,10 +29,6 @@ fi
 
 export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_NO_AUTO_UPDATE=1
-command -v brew > /dev/null
-if [[ $? -eq 0 ]]; then
-   export PATH="$(brew --prefix make)/libexec/gnubin:$PATH"
-fi
 
 #
 # SDKs
