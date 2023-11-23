@@ -99,3 +99,5 @@ export PATH=$HOME/.cargo/bin:$PATH
 #
 # Aliases
 #
+
+source ~/.aliases

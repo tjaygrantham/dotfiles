@@ -17,11 +17,11 @@
 
     # bash
     ~/.bashrc: bash/bashrc
-    ~/.bash_profile: profile
+    ~/.bash_profile: bash/bash_profile
 
     # zsh
     ~/.zshrc: zsh/zshrc
-    ~/.zprofile: profile
+    ~/.zprofile: zsh/zprofile
     ~/.zsh_plugins.txt: zsh/zsh_plugins.txt
     ~/.p10k.zsh: zsh/p10k.zsh
 
@@ -47,6 +47,10 @@
 
 - shell:
     - [git submodule update --init --recursive, Installing Submodules]
+    - [
+        git clone --depth=1 https://github.com/ohmybash/oh-my-bash ~/.oh-my-bash,
+        Installing oh-my-bash
+      ]
     - [
         fish -c "curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher",
         Installing fisher,
