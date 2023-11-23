@@ -12,9 +12,11 @@
     # profile
     ~/.profile: profile
 
+    # aliases
+    ~/.aliases: aliases
+
     # bash
     ~/.bashrc: bash/bashrc
-    ~/.bash_aliases: bash/bash_aliases
     ~/.bash_profile: profile
 
     # zsh

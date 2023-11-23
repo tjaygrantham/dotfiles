@@ -1,4 +1,12 @@
-source ~/.bashrc
+if [[ "$OSTYPE" == darwin* ]]; then
+  if [[ $(arch) == arm64 ]]; then
+    export PATH="$PATH:/opt/homebrew/bin"
+  else
+    export PATH="$PATH:/usr/local/bin"
+  fi
+else
+  export PATH="$PATH:/home/linuxbrew/.linuxbrew/bin"
+fi
 
 source $(brew --prefix)/share/antidote/antidote.zsh
 antidote bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.zsh
@@ -58,3 +66,5 @@ ZSH_HIGHLIGHT_STYLES[reserved-word]="fg=4"
 ZSH_HIGHLIGHT_STYLES[single-hyphen-option]="fg=6"
 ZSH_HIGHLIGHT_STYLES[single-quoted-argument-unclosed]="fg=9"
 ZSH_HIGHLIGHT_STYLES[unknown-token]="fg=9"
+
+source ~/.aliases

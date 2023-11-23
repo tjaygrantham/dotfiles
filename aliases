@@ -10,7 +10,12 @@ if [[ $? -eq 0 ]]; then
   alias code="codium"
 fi
 
-alias clear="clear && printf \"\e[H\e[3J\""
+command -v code > /dev/null
+if [[ $? -eq 0 ]]; then
+  alias vsc="code ."
+fi
+
+alias clear="clear; printf \"\e[H\e[3J\""
 if [[ "$TERM" == "xterm-kitty" ]]; then
   alias ssh="TERM=xterm-256color ssh"
 fi
