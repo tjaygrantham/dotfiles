@@ -11,3 +11,6 @@ if [[ $? -eq 0 ]]; then
 fi
 
 alias clear="clear && printf \"\e[H\e[3J\""
+if [[ "$TERM" == "xterm-kitty" ]]; then
+  alias ssh="kitty +kitten ssh"
+fi
