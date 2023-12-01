@@ -2,11 +2,12 @@
 # macOS Specific
 #
 
-if [[ "$OSTYPE" == darwin* ]]; then
+if [[ $(uname -s) == Darwin ]]; then
   export BROWSER='open'
   if [[ $(arch) == arm64 ]]; then
     export PATH="/opt/homebrew/bin:$PATH"
   else
+    export PATH="/usr/local/bin:$PATH"
     export PYENV_ROOT="$HOME/.pyenv-x86"
   fi
   command -v brew > /dev/null

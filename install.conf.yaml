@@ -48,7 +48,7 @@
 - shell:
     - [git submodule update --init --recursive, Installing Submodules]
     - [
-        git clone --depth=1 https://github.com/ohmybash/oh-my-bash ~/.oh-my-bash,
+        "[ -d ~/.oh-my-bash ] || git clone --depth=1 https://github.com/ohmybash/oh-my-bash ~/.oh-my-bash",
         Installing oh-my-bash
       ]
     - [
