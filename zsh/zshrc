@@ -12,7 +12,7 @@ command -v brew > /dev/null
 if [[ $? == 0 ]]; then
   source $(brew --prefix antidote)/share/antidote/antidote.zsh
 else
-  git clone https://github.com/mattmc3/antidote /usr/local/share/antidote
+  [ -d /usr/local/share/antidote ] || git clone https://github.com/mattmc3/antidote /usr/local/share/antidote
   source /usr/local/share/antidote/antidote.zsh
 fi
 antidote bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.zsh
