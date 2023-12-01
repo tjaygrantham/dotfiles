@@ -33,6 +33,7 @@
     ~/.config/fish/functions/code.fish: fish/functions/code.fish
     ~/.config/fish/functions/jtool2.fish: fish/functions/jtool2.fish
     ~/.config/fish/functions/ls.fish: fish/functions/ls.fish
+    ~/.config/fish/functions/sudo.fish: fish/functions/sudo.fish
     ~/.config/fish/functions/vsc.fish: fish/functions/vsc.fish
 
     # git
