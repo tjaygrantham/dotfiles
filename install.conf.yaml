@@ -48,19 +48,22 @@
 - shell:
     - [git submodule update --init --recursive, Installing Submodules]
     - [
-        "[ -d ~/.oh-my-bash ] || git clone --depth=1 https://github.com/ohmybash/oh-my-bash ~/.oh-my-bash",
-        Installing oh-my-bash
+        "[[ $(type bash) == *\"not found\" || -d ~/.oh-my-bash ]] || git clone --depth=1 https://github.com/ohmybash/oh-my-bash ~/.oh-my-bash",
+        Installing oh-my-bash,
       ]
     - [
-        fish -c "curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher",
+        "[[ $(type fish) != *\"not found\" ]] && fish -c \"curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher\"",
         Installing fisher,
       ]
     - [
-        fish -c "fisher list | grep "ilancosman/tide" || fisher install ilancosman/tide@v5",
+        "[[ $(type fish) != *\"not found\" ]] && fish -c \"fisher list | grep \"ilancosman/tide\" || fisher install ilancosman/tide@v5\"",
         Installing tide,
       ]
     - [
-        fish -c "fisher list | grep "oh-my-fish/plugin-cd" || fisher install oh-my-fish/plugin-cd",
+        "[[ $(type fish) != *\"not found\" ]] && fish -c \"fisher list | grep \"oh-my-fish/plugin-cd\" || fisher install oh-my-fish/plugin-cd\"",
         Installing cd plugin,
       ]
-    - [fish -c "fisher install jethrokuan/z", Installing z plugin]
+    - [
+        "[[ $(type fish) != *\"not found\" ]] && fish -c \"fisher install jethrokuan/z\"",
+        Installing z plugin,
+      ]
