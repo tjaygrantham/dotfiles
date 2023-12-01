@@ -7,6 +7,11 @@ esac
 # Path to your oh-my-bash installation.
 export OSH="$HOME/.oh-my-bash"
 
+if [ ! -d $OSH ]; then
+  git clone -q --depth=1 https://github.com/ohmybash/oh-my-bash $OSH
+fi
+git -C $OSH pull -q
+
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-bash is loaded.
 OSH_THEME="powerline-multiline"

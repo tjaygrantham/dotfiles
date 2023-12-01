@@ -1,3 +1,9 @@
+# Enable the subsequent settings only in interactive sessions
+case $- in
+  *i*) ;;
+    *) return;;
+esac
+
 if [[ $(uname -s) == Darwin ]]; then
   if [[ $(arch) == arm64 ]]; then
     export PATH="$PATH:/opt/homebrew/bin"
@@ -8,14 +14,12 @@ else
   export PATH="$PATH:/home/linuxbrew/.linuxbrew/bin"
 fi
 
-command -v brew > /dev/null
-if [[ $? == 0 ]]; then
-  source $(brew --prefix antidote)/share/antidote/antidote.zsh
-else
+if [ ! -d ~/.local/share/antidote ]; then
   mkdir -p ~/.local/share
-  [ -d ~/.local/share/antidote ] || git clone https://github.com/mattmc3/antidote ~/.local/share/antidote
-  source ~/.local/share/antidote/antidote.zsh
+  git clone -q https://github.com/mattmc3/antidote ~/.local/share/antidote
 fi
+git -C ~/.local/share/antidote pull -q
+source ~/.local/share/antidote/antidote.zsh
 antidote bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.zsh
 source ~/.zsh_plugins.zsh
 

@@ -49,22 +49,18 @@
 - shell:
     - [git submodule update --init --recursive, Installing Submodules]
     - [
-        "command -v bash; [[ $? != 0 || -d ~/.oh-my-bash ]] || git clone --depth=1 https://github.com/ohmybash/oh-my-bash ~/.oh-my-bash",
-        Installing oh-my-bash,
-      ]
-    - [
-        "command -v fish; [[ $? == 0 ]] && fish -c \"curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher\"",
+        'command -v fish; [[ $? != 0 ]] || fish -c "curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher"',
         Installing fisher,
       ]
     - [
-        "command -v fish; [[ $? == 0 ]] && fish -c \"fisher list | grep \"ilancosman/tide\" || fisher install ilancosman/tide@v5\"",
+        'command -v fish; [[ $? != 0 ]] || fish -c "fisher list | grep "ilancosman/tide" || fisher install ilancosman/tide@v5"',
         Installing tide,
       ]
     - [
-        "command -v fish; [[ $? == 0 ]] && fish -c \"fisher list | grep \"oh-my-fish/plugin-cd\" || fisher install oh-my-fish/plugin-cd\"",
+        'command -v fish; [[ $? != 0 ]] || fish -c "fisher list | grep "oh-my-fish/plugin-cd" || fisher install oh-my-fish/plugin-cd"',
         Installing cd plugin,
       ]
     - [
-        "command -v fish; [[ $? == 0 ]] && fish -c \"fisher install jethrokuan/z\"",
+        'command -v fish; [[ $? != 0 ]] || fish -c "fisher install jethrokuan/z"',
         Installing z plugin,
       ]
