@@ -25,7 +25,7 @@
     ~/.zsh_plugins.txt: zsh/zsh_plugins.txt
     ~/.p10k.zsh: zsh/p10k.zsh
 
-    #fish
+    # fish
     ~/.config/fish/config.fish: fish/config.fish
     ~/.config/fish/fish_variables: fish/fish_variables
     ~/.config/fish/functions/clear.fish: fish/functions/clear.fish
@@ -40,6 +40,7 @@
 
     # alacritty
     ~/.config/alacritty/alacritty.toml: alacritty/alacritty.toml
+    ~/.config/alacritty/alacritty.icns: alacritty/alacritty.icns
 
     # kitty
     ~/.config/kitty/kitty.conf: kitty/kitty.conf
@@ -47,7 +48,7 @@
     # tmux
     ~/.tmux.conf: tmux/tmux.conf
 
-    #neovim
+    # neovim
     ~/.config/nvim: nvim
 
 - shell:
