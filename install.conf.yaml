@@ -1,0 +1,74 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+      force: true
+    shell:
+      stderr: true
+
+- clean: ["~"]
+
+- link:
+    # profile
+    ~/.profile: profile
+
+    # aliases
+    ~/.aliases: aliases
+
+    # bash
+    ~/.bashrc: bash/bashrc
+    ~/.bash_profile: bash/bash_profile
+
+    # zsh
+    ~/.zshrc: zsh/zshrc
+    ~/.zprofile: zsh/zprofile
+    ~/.zsh_plugins.txt: zsh/zsh_plugins.txt
+    ~/.p10k.zsh: zsh/p10k.zsh
+
+    #fish
+    ~/.config/fish/config.fish: fish/config.fish
+    ~/.config/fish/fish_variables: fish/fish_variables
+    ~/.config/fish/functions/clear.fish: fish/functions/clear.fish
+    ~/.config/fish/functions/code.fish: fish/functions/code.fish
+    ~/.config/fish/functions/ls.fish: fish/functions/ls.fish
+    ~/.config/fish/functions/sudo.fish: fish/functions/sudo.fish
+    ~/.config/fish/functions/vsc.fish: fish/functions/vsc.fish
+
+    # git
+    ~/.gitconfig: git/gitconfig
+    ~/.config/git/ignore: git/gitignore
+
+    # alacritty
+    ~/.config/alacritty/alacritty.toml: alacritty/alacritty.toml
+
+    # kitty
+    ~/.config/kitty/kitty.conf: kitty/kitty.conf
+
+    # tmux
+    ~/.tmux.conf: tmux/tmux.conf
+
+    #neovim
+    ~/.config/nvim: nvim
+
+- shell:
+    - [
+        '[[ -d ~/.config/alacritty/themes ]] || git clone https://github.com/alacritty/alacritty-theme ~/.config/alacritty/themes',
+        'Clone alacritty themes'
+      ]
+    - [git submodule update --init --recursive, Installing Submodules]
+    - [
+        'command -v fish; [[ $? != 0 ]] || fish -c "curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher"',
+        Installing fisher,
+      ]
+    - [
+        'command -v fish; [[ $? != 0 ]] || fish -c "fisher list | grep "ilancosman/tide" || fisher install ilancosman/tide@v5"',
+        Installing tide,
+      ]
+    - [
+        'command -v fish; [[ $? != 0 ]] || fish -c "fisher list | grep "oh-my-fish/plugin-cd" || fisher install oh-my-fish/plugin-cd"',
+        Installing cd plugin,
+      ]
+    - [
+        'command -v fish; [[ $? != 0 ]] || fish -c "fisher install jethrokuan/z"',
+        Installing z plugin,
+      ]

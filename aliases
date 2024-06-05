@@ -1,0 +1,31 @@
+command -v eza > /dev/null
+if [[ $? == 0 ]]; then
+  alias ls="eza -l --icons --git"
+else
+  command -v exa > /dev/null
+  if [[ $? == 0 ]]; then
+    alias ls="exa -l --icons --git"
+  else
+    alias ls="ls -l --color=auto"
+  fi
+fi
+
+command -v codium > /dev/null
+if [[ $? == 0 ]]; then
+  alias code=codium
+fi
+
+command -v code > /dev/null
+if [[ $? == 0 ]]; then
+  alias vsc="code ."
+fi
+
+command -v doas > /dev/null
+if [[ $? == 0 ]]; then
+  alias sudo=doas
+fi
+
+alias clear="clear; printf \"\e[H\e[3J\""
+if [[ "$TERM" == "xterm-kitty" ]]; then
+  alias ssh="TERM=xterm-256color ssh"
+fi

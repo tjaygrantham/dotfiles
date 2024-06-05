@@ -1,0 +1,72 @@
+case $- in
+  *i*) ;;
+    *) return;;
+esac
+
+export GPG_TTY=$(tty)
+
+if [ ! -d ~/.local/share/antidote ]; then
+  mkdir -p ~/.local/share
+  git clone -q https://github.com/mattmc3/antidote ~/.local/share/antidote
+fi
+git -C ~/.local/share/antidote pull -q
+source ~/.local/share/antidote/antidote.zsh
+antidote bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.zsh
+source ~/.zsh_plugins.zsh
+
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+if [[ $(uname -s) == Darwin && $(sysctl -n machdep.cpu.brand_string) == Apple* ]]; then
+  typeset -g POWERLEVEL9K_CPU_ARCH_ARM64E_CONTENT_EXPANSION=
+  typeset -g POWERLEVEL9K_CPU_ARCH_ARM64E_VISUAL_IDENTIFIER_EXPANSION=
+else
+  typeset -g POWERLEVEL9K_CPU_ARCH_I386_CONTENT_EXPANSION=
+  typeset -g POWERLEVEL9K_CPU_ARCH_I386_VISUAL_IDENTIFIER_EXPANSION=
+  typeset -g POWERLEVEL9K_CPU_ARCH_I486_CONTENT_EXPANSION=
+  typeset -g POWERLEVEL9K_CPU_ARCH_I486_VISUAL_IDENTIFIER_EXPANSION=
+  typeset -g POWERLEVEL9K_CPU_ARCH_X86_64_CONTENT_EXPANSION=
+  typeset -g POWERLEVEL9K_CPU_ARCH_X86_64_VISUAL_IDENTIFIER_EXPANSION=
+fi
+
+zstyle :prompt:pure:path color cyan
+zstyle :prompt:pure:prompt:success color green
+zstyle ':prompt:pure:git:*' color magenta
+zstyle :prompt:pure:virtualenv color yellow
+
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=238"
+ZSH_AUTOSUGGEST_USE_ASYNC=1
+
+ZSH_HIGHLIGHT_STYLES[alias]="fg=4"
+ZSH_HIGHLIGHT_STYLES[assign]="fg=6"
+ZSH_HIGHLIGHT_STYLES[autodirectory]="fg=6"
+ZSH_HIGHLIGHT_STYLES[back-dollar-quoted-argument]="fg=3"
+ZSH_HIGHLIGHT_STYLES[back-double-quoted-argument]="fg=14"
+ZSH_HIGHLIGHT_STYLES[back-quoted-argument]="fg=6"
+ZSH_HIGHLIGHT_STYLES[back-quoted-argument-delimiter]="fg=6"
+ZSH_HIGHLIGHT_STYLES[back-quoted-argument-unclosed]="fg=6"
+ZSH_HIGHLIGHT_STYLES[builtin]="fg=4"
+ZSH_HIGHLIGHT_STYLES[command]="fg=4"
+ZSH_HIGHLIGHT_STYLES[command-substitution-delimiter]="fg=14"
+ZSH_HIGHLIGHT_STYLES[comment]="fg=238"
+ZSH_HIGHLIGHT_STYLES[default]="fg=6"
+ZSH_HIGHLIGHT_STYLES[double-hyphen-option]="fg=6"
+ZSH_HIGHLIGHT_STYLES[dollar-quoted-argument-unclosed]="fg=9"
+ZSH_HIGHLIGHT_STYLES[double-quoted-argument-unclosed]="fg=9"
+ZSH_HIGHLIGHT_STYLES[function]="fg=4"
+ZSH_HIGHLIGHT_STYLES[globbing]="fg=14"
+ZSH_HIGHLIGHT_STYLES[path]="fg=6,underline"
+ZSH_HIGHLIGHT_STYLES[precommand]="fg=4"
+ZSH_HIGHLIGHT_STYLES[reserved-word]="fg=4"
+ZSH_HIGHLIGHT_STYLES[single-hyphen-option]="fg=6"
+ZSH_HIGHLIGHT_STYLES[single-quoted-argument-unclosed]="fg=9"
+ZSH_HIGHLIGHT_STYLES[unknown-token]="fg=9"
+
+source ~/.aliases
