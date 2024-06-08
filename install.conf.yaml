@@ -53,10 +53,6 @@
     ~/.config/nvim: nvim
 
 - shell:
-    - [
-        '[[ -d ~/.config/alacritty/themes ]] || git clone https://github.com/alacritty/alacritty-theme ~/.config/alacritty/themes',
-        'Clone alacritty themes'
-      ]
     - [git submodule update --init --recursive, Installing Submodules]
     - [
         'command -v fish; [[ $? != 0 ]] || fish -c "curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher"',
