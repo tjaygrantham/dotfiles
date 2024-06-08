@@ -29,3 +29,5 @@ alias clear="clear; printf \"\e[H\e[3J\""
 if [[ "$TERM" == "xterm-kitty" ]]; then
   alias ssh="TERM=xterm-256color ssh"
 fi
+
+alias openasar="curl -fsSL -o /Applications/Discord.app/Contents/Resources/app.asar $(curl -fsSL https://api.github.com/repos/GooseMod/OpenAsar/releases/latest | jq -r '.assets[0].browser_download_url')"
