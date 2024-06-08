@@ -41,6 +41,7 @@
     # alacritty
     ~/.config/alacritty/alacritty.toml: alacritty/alacritty.toml
     ~/.config/alacritty/alacritty.icns: alacritty/alacritty.icns
+    ~/.config/alacritty/themes: alacritty/themes
 
     # kitty
     ~/.config/kitty/kitty.conf: kitty/kitty.conf
