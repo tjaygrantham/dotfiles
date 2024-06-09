@@ -1,0 +1,18 @@
+// Place your key bindings in this file to override the defaults
+[
+  {
+    "key": "shift+cmd+i",
+    "command": "workbench.action.tasks.runTask",
+    "args": "install"
+  },
+  {
+    "key": "shift+cmd+c",
+    "command": "workbench.action.tasks.runTask",
+    "args": "clean"
+  },
+  {
+    "key": "shift+cmd+r",
+    "command": "workbench.action.tasks.runTask",
+    "args": "release"
+  }
+]
