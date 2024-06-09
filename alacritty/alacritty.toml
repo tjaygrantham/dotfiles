@@ -12,10 +12,10 @@ size = 14
 
 bindings = [
 	{ key = "ArrowLeft", mods = "Command", action = "SelectPreviousTab" },
-	{ key = "ArrowRight", mods = "Command", action = "SelectNextTab" }
+	{ key = "ArrowRight", mods = "Command", action = "SelectNextTab" },
+  { key = "N", mods = "Command | Control", command = { program = "/opt/homebrew/bin/alacritty", args = [ "msg", "create-window", "-e", "arch", "-x86_64", "/usr/local/bin/zsh", "--login" ] } }
 ]
 
 [window]
 
 decorations = "Full"
-opacity = 0.75
