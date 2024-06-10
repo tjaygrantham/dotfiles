@@ -38,9 +38,6 @@
     ~/.gitconfig: git/gitconfig
     ~/.config/git/ignore: git/gitignore
 
-    # kitty
-    ~/.config/kitty: kitty
-
     # wezterm
     ~/.wezterm.lua: wezterm/wezterm.lua
 
