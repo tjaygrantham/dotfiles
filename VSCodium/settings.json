@@ -1,7 +1,9 @@
 {
-  "workbench.colorTheme": "Rosé Pine",
+  "workbench.preferredDarkColorTheme": "Rosé Pine",
+  "workbench.preferredLightColorTheme": "Rosé Pine Dawn",
   "workbench.productIconTheme": "material-product-icons",
   "workbench.iconTheme": "material-icon-theme",
+  "window.autoDetectColorScheme": true,
   "terminal.integrated.fontFamily": "MesloLGS Nerd Font",
   "terminal.integrated.fontSize": 14,
   "editor.tabSize": 2,

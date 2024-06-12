@@ -8,13 +8,22 @@
 // from the command palette or from `Zed` application menu.
 {
   "base_keymap": "VSCode",
-  "theme": "Rosé Pine Moon",
+  "theme": {
+    "mode": "system",
+    "dark": "Rosé Pine",
+    "light": "Rosé Pine Dawn"
+  },
   "telemetry": {
     "diagnostics": false,
     "metrics": false
   },
-  "ui_font_size": 16,
-  "buffer_font_size": 16,
+  "terminal": {
+    "font_family": "MesloLGS Nerd Font",
+    "font_size": 14
+  },
+  "cursor_blink": false,
+  "ui_font_size": 14,
+  "buffer_font_size": 14,
   "features": {
     "copilot": false
   },

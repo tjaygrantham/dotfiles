@@ -1,5 +1,8 @@
 return {
-  { "rose-pine/neovim", name = "rose-pine" },
+  {
+    "rose-pine/neovim",
+    name = "rose-pine",
+  },
   {
     "LazyVim/LazyVim",
     opts = {
@@ -10,10 +13,8 @@ return {
     "akinsho/bufferline.nvim",
     event = "ColorScheme",
     config = function()
-      require("bufferline").setup({
-        highlights = require("rose-pine.plugins.bufferline")
-      })
-    end
+      require("bufferline").setup()
+    end,
   },
   {
     "nvim-lualine/lualine.nvim",
@@ -22,9 +23,9 @@ return {
       require("lualine").setup({
         options = {
           --- @usage 'rose-pine' | 'rose-pine-alt'
-          theme = "rose-pine"
-        }
+          theme = "rose-pine",
+        },
       })
-    end
+    end,
   },
 }
