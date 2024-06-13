@@ -11,7 +11,7 @@ vim.api.nvim_create_autocmd("VimEnter", {
 
 vim.filetype.add({
   extension = {
-    x = "objc",
-    xm = "objc",
+    x = "logos",
+    xm = "logos",
   },
 })

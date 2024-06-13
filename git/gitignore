@@ -25,6 +25,11 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
+# Clang
+.cache/clangd
+compile_commands.json
+.clangd
+
 # NodeJS
 node_modules
 

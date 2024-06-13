@@ -47,13 +47,18 @@
     # neovim
     ~/.config/nvim: nvim
 
+    # Sublime Text
+    ~/Library/Application Support/Sublime Text/Packages/User/Preferences.sublime-settings:
+      if: "[ `uname` = Darwin ]"
+      path: sublime/Preferences.sublime-settings
+
     # VSCodium
     ~/Library/Application Support/VSCodium/User/keybindings.json:
       if: "[ `uname` = Darwin ]"
-      path: VSCodium/keybindings.json
+      path: vscodium/keybindings.json
     ~/Library/Application Support/VSCodium/User/settings.json:
       if: "[ `uname` = Darwin ]"
-      path: VSCodium/settings.json
+      path: vscodium/settings.json
 
     # zed
     ~/.config/zed/settings.json: zed/settings.json

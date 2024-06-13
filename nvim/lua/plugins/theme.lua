@@ -2,6 +2,9 @@ return {
   {
     "rose-pine/neovim",
     name = "rose-pine",
+    opts = {
+      dark_variant = "moon"
+    }
   },
   {
     "LazyVim/LazyVim",
@@ -27,5 +30,11 @@ return {
         },
       })
     end,
+  },
+  {
+    "f-person/auto-dark-mode.nvim",
+    opts = {
+      update_interval = 3000,
+    },
   },
 }

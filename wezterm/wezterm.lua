@@ -9,7 +9,7 @@ local function get_appearance()
 end
 
 local rose_pine_plugin = wezterm.plugin.require("https://github.com/neapsix/wezterm")
-local theme = get_appearance():find("Light") and rose_pine_plugin.dawn or rose_pine_plugin.main
+local theme = get_appearance():find("Light") and rose_pine_plugin.dawn or rose_pine_plugin.moon
 config.colors = theme.colors()
 config.window_frame = theme.window_frame()
 

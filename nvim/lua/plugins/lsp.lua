@@ -1,4 +1,12 @@
 return {
-  "neovim/nvim-lspconfig",
-  "kabouzeid/nvim-lspinstall",
+  {
+    "neovim/nvim-lspconfig",
+    opts = {
+      servers = {
+        clangd = {
+          mason = false,
+        },
+      },
+    },
+  },
 }
