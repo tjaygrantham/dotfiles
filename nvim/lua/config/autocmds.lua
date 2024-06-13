@@ -15,3 +15,6 @@ vim.filetype.add({
     xm = "logos",
   },
 })
+
+require("dark_notify").run()
+
