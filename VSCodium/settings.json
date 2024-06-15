@@ -11,6 +11,7 @@
     "*.css": "tailwindcss"
   },
   "editor.cursorStyle": "block",
+  "editor.cursorBlinking": "solid",
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },

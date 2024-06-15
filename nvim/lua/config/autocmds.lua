@@ -8,13 +8,3 @@ vim.api.nvim_create_autocmd("VimEnter", {
     end
   end,
 })
-
-vim.filetype.add({
-  extension = {
-    x = "logos",
-    xm = "logos",
-  },
-})
-
-require("dark_notify").run()
-
