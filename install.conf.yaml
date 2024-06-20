@@ -41,11 +41,17 @@
     # wezterm
     ~/.wezterm.lua: wezterm/wezterm.lua
 
+    # kitty
+    ~/.config/kitty: kitty
+
     # tmux
     ~/.tmux.conf: tmux/tmux.conf
 
     # neovim
     ~/.config/nvim: nvim
+
+    # clang
+    ~/.clang-format: clang/clang-format
 
     # Sublime Text
     ~/Library/Application Support/Sublime Text/Packages/User/Preferences.sublime-settings:
