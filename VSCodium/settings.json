@@ -32,4 +32,5 @@
   },
   "svelte.enable-ts-plugin": true,
   "clangd.path": "/usr/bin/clangd",
+  "workbench.startupEditor": "none"
 }

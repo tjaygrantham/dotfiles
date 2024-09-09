@@ -1,14 +1,11 @@
 {
-	"ignored_packages":
-	[
-		"Vintage",
-	],
-	"index_files": true,
-	"caret_style": "solid",
-	"block_caret": true,
-	"color_scheme": "auto",
-	"light_theme": "Rosé Pine Dawn.sublime-theme",
-	"light_color_scheme": "Rosé Pine Dawn.sublime-color-scheme",
-	"dark_theme": "Rosé Pine Moon.sublime-theme",
-	"dark_color_scheme": "Rosé Pine Moon.sublime-color-scheme"
+  "ignored_packages": ["Vintage"],
+  "index_files": true,
+  "caret_style": "solid",
+  "block_caret": true,
+  "color_scheme": "auto",
+  "light_theme": "Rosé Pine Dawn.sublime-theme",
+  "light_color_scheme": "Rosé Pine Dawn.sublime-color-scheme",
+  "dark_theme": "Rosé Pine Moon.sublime-theme",
+  "dark_color_scheme": "Rosé Pine Moon.sublime-color-scheme",
 }

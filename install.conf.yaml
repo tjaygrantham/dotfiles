@@ -35,23 +35,35 @@
     ~/.config/fish/functions/vsc.fish: fish/functions/vsc.fish
 
     # git
-    ~/.gitconfig: git/gitconfig
-    ~/.config/git/ignore: git/gitignore
-
-    # wezterm
-    ~/.wezterm.lua: wezterm/wezterm.lua
+    ~/.config/git/config: git/config
+    ~/.config/git/ignore: git/ignore
 
     # kitty
     ~/.config/kitty: kitty
 
+    # skhd
+    ~/.skhdrc:
+      if: "[ `uname` = Darwin ]"
+      path: skhd/skhdrc
+
     # tmux
     ~/.tmux.conf: tmux/tmux.conf
 
-    # neovim
-    ~/.config/nvim: nvim
+    # wezterm
+    ~/.wezterm.lua: wezterm/wezterm.lua
+
+    # yabai
+    ~/.yabairc:
+      if: "[ `uname` = Darwin ]"
+      path: yabai/yabairc
 
     # clang
     ~/.clang-format: clang/clang-format
+
+    # neovim
+    ~/AppData/Local/nvim:
+      if: python -c "import os, sys; sys.exit(0 if os.name == 'nt' else 1)"
+    ~/.config/nvim: nvim
 
     # Sublime Text
     ~/Library/Application Support/Sublime Text/Packages/User/Preferences.sublime-settings:
@@ -59,6 +71,12 @@
       path: sublime/Preferences.sublime-settings
 
     # VSCodium
+    ~/AppData/Roaming/VSCodium/User/keybindings.json:
+      if: python -c "import os, sys; sys.exit(0 if os.name == 'nt' else 1)"
+      path: vscodium/keybindings.json
+    ~/AppData/Roaming/VSCodium/User/settings.json:
+      if: python -c "import os, sys; sys.exit(0 if os.name == 'nt' else 1)"
+      path: vscodium/settings.json
     ~/Library/Application Support/VSCodium/User/keybindings.json:
       if: "[ `uname` = Darwin ]"
       path: vscodium/keybindings.json
@@ -67,7 +85,9 @@
       path: vscodium/settings.json
 
     # zed
-    ~/.config/zed/settings.json: zed/settings.json
+    ~/.config/zed/settings.json:
+      if: python -c "import os, sys; sys.exit(1 if os.name == 'nt' else 0)"
+      path: zed/settings.json
 
 - shell:
     - [git submodule update --init --recursive, Installing Submodules]

@@ -16,6 +16,9 @@ config.window_frame = theme.window_frame()
 config.font = wezterm.font("MesloLGS Nerd Font")
 config.font_size = 14
 
+config.enable_scroll_bar = true
+config.colors.scrollbar_thumb = theme.colors().tab_bar.inactive_tab.fg_color
+
 config.keys = {
 	{
 		key = "LeftArrow",
