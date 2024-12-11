@@ -32,5 +32,13 @@
   },
   "svelte.enable-ts-plugin": true,
   "clangd.path": "/usr/bin/clangd",
-  "workbench.startupEditor": "none"
+  "workbench.startupEditor": "none",
+  "update.showReleaseNotes": false,
+  "java.imports.gradle.wrapper.checksums": [
+    {
+      "sha256": "2cae31aaabe2b362438e10dce5538f9a554e183056485df883f45aee08a008e0",
+      "allowed": false
+    }
+  ],
+  "redhat.telemetry.enabled": false
 }

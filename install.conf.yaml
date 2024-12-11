@@ -25,21 +25,9 @@
     ~/.zsh_plugins.txt: zsh/zsh_plugins.txt
     ~/.p10k.zsh: zsh/p10k.zsh
 
-    # fish
-    ~/.config/fish/config.fish: fish/config.fish
-    ~/.config/fish/fish_variables: fish/fish_variables
-    ~/.config/fish/functions/clear.fish: fish/functions/clear.fish
-    ~/.config/fish/functions/code.fish: fish/functions/code.fish
-    ~/.config/fish/functions/ls.fish: fish/functions/ls.fish
-    ~/.config/fish/functions/sudo.fish: fish/functions/sudo.fish
-    ~/.config/fish/functions/vsc.fish: fish/functions/vsc.fish
-
     # git
     ~/.config/git/config: git/config
     ~/.config/git/ignore: git/ignore
-
-    # kitty
-    ~/.config/kitty: kitty
 
     # skhd
     ~/.skhdrc:
@@ -79,31 +67,15 @@
       path: vscodium/settings.json
     ~/Library/Application Support/VSCodium/User/keybindings.json:
       if: "[ `uname` = Darwin ]"
-      path: vscodium/keybindings.json
+      path: vscodium/keybindings.jsonc
     ~/Library/Application Support/VSCodium/User/settings.json:
       if: "[ `uname` = Darwin ]"
-      path: vscodium/settings.json
+      path: vscodium/settings.jsonc
 
     # zed
     ~/.config/zed/settings.json:
       if: python -c "import os, sys; sys.exit(1 if os.name == 'nt' else 0)"
-      path: zed/settings.json
+      path: zed/settings.jsonc
 
 - shell:
     - [git submodule update --init --recursive, Installing Submodules]
-    - [
-        'command -v fish; [[ $? != 0 ]] || fish -c "curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher"',
-        Installing fisher,
-      ]
-    - [
-        'command -v fish; [[ $? != 0 ]] || fish -c "fisher list | grep "ilancosman/tide" || fisher install ilancosman/tide@v5"',
-        Installing tide,
-      ]
-    - [
-        'command -v fish; [[ $? != 0 ]] || fish -c "fisher list | grep "oh-my-fish/plugin-cd" || fisher install oh-my-fish/plugin-cd"',
-        Installing cd plugin,
-      ]
-    - [
-        'command -v fish; [[ $? != 0 ]] || fish -c "fisher install jethrokuan/z"',
-        Installing z plugin,
-      ]

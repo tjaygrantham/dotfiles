@@ -59,6 +59,15 @@ export PATH=$PATH:$HOME/go/bin
 
 export PATH=$PATH:$HOME/.cargo/bin
 
+# ps3dev
+
+export PS3DEV=$HOME/ps3dev
+export PSL1GHT=$PS3DEV
+
+export PATH=$PATH:$PS3DEV/bin
+export PATH=$PATH:$PS3DEV/ppu/bin
+export PATH=$PATH:$PS3DEV/spu/bin
+
 # pspdev
 
 export PSPDEV=$HOME/pspdev
@@ -85,4 +94,3 @@ if [[ $(uname -s) == Darwin ]]; then
 		export PATH=/opt/MonkeyDev/bin:$PATH
 	fi
 fi
-

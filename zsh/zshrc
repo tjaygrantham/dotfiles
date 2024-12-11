@@ -5,6 +5,11 @@ esac
 
 export GPG_TTY=$(tty)
 
+[[ $(uname -s) == Darwin && $(arch) != arm64 ]] && export PYENV_ROOT="$HOME/.pyenv-x86"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+command -v pyenv >/dev/null
+[[ $? == 0 ]] && eval "$(pyenv init -)"
+
 if [ ! -d ~/.local/share/antidote ]; then
   mkdir -p ~/.local/share
   git clone -q https://github.com/mattmc3/antidote ~/.local/share/antidote
@@ -70,3 +75,6 @@ ZSH_HIGHLIGHT_STYLES[single-quoted-argument-unclosed]="fg=9"
 ZSH_HIGHLIGHT_STYLES[unknown-token]="fg=9"
 
 source ~/.aliases
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/tgrantham/.cache/lm-studio/bin"
