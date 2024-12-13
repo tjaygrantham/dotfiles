@@ -29,10 +29,10 @@ fi
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-if [[ $(uname -s) == Darwin && $(sysctl -n machdep.cpu.brand_string) == Apple* ]]; then
+if [[ $(uname -s) == Darwin && $(sysctl -n machdep.cpu.brand_string 2>/dev/null) == Apple* ]]; then
   typeset -g POWERLEVEL9K_CPU_ARCH_ARM64E_CONTENT_EXPANSION=
   typeset -g POWERLEVEL9K_CPU_ARCH_ARM64E_VISUAL_IDENTIFIER_EXPANSION=
-elif [[ $(sysctl -n sysctl.proc_translated) != 1 ]]; then
+elif [[ $(sysctl -n sysctl.proc_translated 2>/dev/null) != 1 ]]; then
   typeset -g POWERLEVEL9K_CPU_ARCH_I386_CONTENT_EXPANSION=
   typeset -g POWERLEVEL9K_CPU_ARCH_I386_VISUAL_IDENTIFIER_EXPANSION=
   typeset -g POWERLEVEL9K_CPU_ARCH_I486_CONTENT_EXPANSION=
