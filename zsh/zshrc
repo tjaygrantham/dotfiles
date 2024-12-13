@@ -32,7 +32,7 @@ fi
 if [[ $(uname -s) == Darwin && $(sysctl -n machdep.cpu.brand_string) == Apple* ]]; then
   typeset -g POWERLEVEL9K_CPU_ARCH_ARM64E_CONTENT_EXPANSION=
   typeset -g POWERLEVEL9K_CPU_ARCH_ARM64E_VISUAL_IDENTIFIER_EXPANSION=
-else
+elif [[ $(sysctl -n sysctl.proc_translated) != 1 ]]; then
   typeset -g POWERLEVEL9K_CPU_ARCH_I386_CONTENT_EXPANSION=
   typeset -g POWERLEVEL9K_CPU_ARCH_I386_VISUAL_IDENTIFIER_EXPANSION=
   typeset -g POWERLEVEL9K_CPU_ARCH_I486_CONTENT_EXPANSION=
@@ -40,11 +40,6 @@ else
   typeset -g POWERLEVEL9K_CPU_ARCH_X86_64_CONTENT_EXPANSION=
   typeset -g POWERLEVEL9K_CPU_ARCH_X86_64_VISUAL_IDENTIFIER_EXPANSION=
 fi
-
-zstyle :prompt:pure:path color cyan
-zstyle :prompt:pure:prompt:success color green
-zstyle ':prompt:pure:git:*' color magenta
-zstyle :prompt:pure:virtualenv color yellow
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=238"
 ZSH_AUTOSUGGEST_USE_ASYNC=1
@@ -76,5 +71,3 @@ ZSH_HIGHLIGHT_STYLES[unknown-token]="fg=9"
 
 source ~/.aliases
 
-# Added by LM Studio CLI (lms)
-export PATH="$PATH:/Users/tgrantham/.cache/lm-studio/bin"

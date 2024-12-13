@@ -35,11 +35,8 @@ ohmyzsh/ohmyzsh path:plugins/xcode
 ohmyzsh/ohmyzsh path:plugins/yarn
 ohmyzsh/ohmyzsh path:plugins/z
 
-mafredri/zsh-async
 romkatv/powerlevel10k
-# sindresorhus/pure
 
-# MichaelAquilina/zsh-autoswitch-virtualenv
 MichaelAquilina/zsh-you-should-use
 
 zsh-users/zsh-autosuggestions

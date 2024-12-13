@@ -79,7 +79,11 @@ if [[ $(uname -s) == Darwin ]]; then
 	export BROWSER='open'
 	command -v brew >/dev/null
 	if [[ $? -eq 0 ]]; then
-		[[ $(arch) == arm64 ]] && export PATH="/opt/homebrew/bin:$PATH"
+    if [[ $(sysctl -n sysctl.proc_translated) == 0 ]]; then
+      export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
+    else
+      export PATH="/usr/local/sbin:$PATH"
+    fi
 		export HOMEBREW_PREFIX=$(brew --prefix)
 		export HOMEBREW_CASK_OPTS="--no-quarantine"
 		export GHIDRA_INSTALL_DIR=$(echo $HOMEBREW_PREFIX/Caskroom/ghidra/*/*)

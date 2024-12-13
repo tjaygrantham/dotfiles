@@ -10,7 +10,7 @@
 
 - link:
     # profile
-    ~/.profile: profile
+    ~/.profile: profile.sh
 
     # aliases
     ~/.aliases: aliases
