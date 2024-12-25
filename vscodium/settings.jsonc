@@ -4,7 +4,7 @@
   "workbench.productIconTheme": "material-product-icons",
   "workbench.iconTheme": "material-icon-theme",
   "window.autoDetectColorScheme": true,
-  "terminal.integrated.fontFamily": "MesloLGS Nerd Font",
+  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
   "terminal.integrated.fontSize": 14,
   "editor.tabSize": 2,
   "files.associations": {
@@ -12,6 +12,7 @@
   },
   "editor.cursorStyle": "block",
   "editor.cursorBlinking": "solid",
+  "editor.fontFamily": "JetBrainsMono Nerd Font, Menlo, Monaco, 'Courier New', monospace",
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
