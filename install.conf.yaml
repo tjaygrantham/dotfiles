@@ -61,10 +61,10 @@
     # VSCodium
     ~/AppData/Roaming/VSCodium/User/keybindings.json:
       if: python -c "import os, sys; sys.exit(0 if os.name == 'nt' else 1)"
-      path: vscodium/keybindings.json
+      path: vscodium/keybindings.jsonc
     ~/AppData/Roaming/VSCodium/User/settings.json:
       if: python -c "import os, sys; sys.exit(0 if os.name == 'nt' else 1)"
-      path: vscodium/settings.json
+      path: vscodium/settings.jsonc
     ~/Library/Application Support/VSCodium/User/keybindings.json:
       if: "[ `uname` = Darwin ]"
       path: vscodium/keybindings.jsonc
