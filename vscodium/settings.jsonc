@@ -8,38 +8,37 @@
   "terminal.integrated.fontSize": 14,
   "editor.tabSize": 2,
   "files.associations": {
-    "*.css": "tailwindcss"
+    "*.css": "tailwindcss",
   },
   "editor.cursorStyle": "block",
   "editor.cursorBlinking": "solid",
   "editor.fontFamily": "JetBrainsMono Nerd Font, Menlo, Monaco, 'Courier New', monospace",
   "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[svelte]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "svelte.enable-ts-plugin": true,
-  "clangd.path": "/usr/bin/clangd",
   "workbench.startupEditor": "none",
   "update.showReleaseNotes": false,
   "java.imports.gradle.wrapper.checksums": [
     {
       "sha256": "2cae31aaabe2b362438e10dce5538f9a554e183056485df883f45aee08a008e0",
-      "allowed": false
-    }
+      "allowed": false,
+    },
   ],
-  "redhat.telemetry.enabled": false
+  "redhat.telemetry.enabled": false,
 }

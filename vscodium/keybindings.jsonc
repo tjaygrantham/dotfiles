@@ -3,16 +3,16 @@
   {
     "key": "shift+cmd+i",
     "command": "workbench.action.tasks.runTask",
-    "args": "install"
+    "args": "install",
   },
   {
     "key": "shift+cmd+c",
     "command": "workbench.action.tasks.runTask",
-    "args": "clean"
+    "args": "clean",
   },
   {
     "key": "shift+cmd+r",
     "command": "workbench.action.tasks.runTask",
-    "args": "release"
-  }
+    "args": "release",
+  },
 ]
