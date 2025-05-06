@@ -1,0 +1,5 @@
+@import url("rose-pine-dawn.css");
+
+@define-color waybar-base rgba(250, 244, 237, 0.65);
+
+@import url("style.css");

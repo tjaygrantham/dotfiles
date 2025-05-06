@@ -45,6 +45,23 @@
       if: "[ `uname` = Darwin ]"
       path: yabai/yabairc
 
+    # darkman
+    ~/.config/darkman/config.yaml: darkman/config.yaml
+    ~/.local/share/light-mode.d: darkman/light-mode.d
+    ~/.local/share/dark-mode.d: darkman/dark-mode.d
+
+    # hyprland
+    ~/.config/hypr: hypr
+
+    # waybar
+    ~/.config/waybar: waybar
+
+    # wofi
+    ~/.config/wofi: wofi
+
+    # xdg-desktop-portal
+    ~/.config/xdg-desktop-portal: xdg-desktop-portal
+
     # clang
     ~/.clang-format: clang/clang-format
 
@@ -59,6 +76,8 @@
       path: sublime/Preferences.sublime-settings
 
     # VSCodium
+    ~/.config/VSCodium/User/settings.json: vscodium/settings.jsonc
+    ~/.config/VSCodium/User/keybindings.json: vscodium/keybindings.jsonc
     ~/AppData/Roaming/VSCodium/User/keybindings.json:
       if: python -c "import os, sys; sys.exit(0 if os.name == 'nt' else 1)"
       path: vscodium/keybindings.jsonc

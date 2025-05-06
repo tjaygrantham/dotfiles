@@ -1,6 +1,8 @@
 local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
+config.enable_wayland = false
+
 local function get_appearance()
 	if wezterm.gui then
 		return wezterm.gui.get_appearance()

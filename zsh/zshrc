@@ -12,7 +12,7 @@ command -v pyenv >/dev/null
 
 if [ ! -d ~/.local/share/antidote ]; then
   mkdir -p ~/.local/share
-  git clone -q https://github.com/mattmc3/antidote ~/.local/share/antidote
+  git clone -q https://github.com/mattmc3/antidote ~/.local/share/antidote 2>&1 >/dev/null
 fi
 git -C ~/.local/share/antidote pull -q
 source ~/.local/share/antidote/antidote.zsh

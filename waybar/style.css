@@ -1,0 +1,109 @@
+* {
+  font-family: "JetBrainsMono Nerd Font";
+  font-weight: 600;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+}
+
+#window {
+  color: @text;
+}
+
+window#waybar {
+  background-color: @waybar-base;
+  border-bottom: 2px solid @love;
+}
+
+window#waybar.hidden {
+  opacity: 0.2;
+}
+
+#mode {
+  background-color: #64727d;
+  border-bottom: 3px solid white;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+  margin-bottom: 2px;
+}
+
+.modules-left {
+  margin-left: 5px;
+}
+
+.modules-right {
+  margin-right: 5px;
+}
+
+.module {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding-left: 7.5px;
+  padding-right: 10px;
+  background-color: @surface;
+  border-radius: 15px;
+}
+
+#workspaces {
+  padding: 0;
+}
+
+#workspaces button {
+  padding: 0 5px 0 5px;
+  background-color: transparent;
+  border-radius: 15px;
+  color: @muted;
+  transition:
+    color 0.2s ease,
+    background 0.2s ease;
+}
+
+#workspaces button.active {
+  color: @text;
+}
+
+#workspaces button.urgent {
+  background-color: @iris;
+  color: black;
+}
+
+#workspaces button:hover {
+  background: @highlightHigh;
+  border-color: transparent;
+  border-radius: 15px;
+  box-shadow: inherit;
+  text-shadow: inherit;
+  /* transition: none; */
+}
+
+#clock {
+  color: @iris;
+}
+
+#gamemode.running {
+  color: @iris;
+}
+
+#wireplumber {
+  padding-right: 15px;
+  color: @gold;
+}
+
+#cpu {
+  color: @rose;
+}
+
+#memory {
+  color: @pine;
+}
+
+#temperature {
+  color: @foam;
+}
+
+#custom-power {
+  color: @love;
+}

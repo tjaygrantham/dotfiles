@@ -1,0 +1,5 @@
+@import url("rose-pine-moon.css");
+
+@define-color waybar-base rgba(35, 33, 54, 0.65);
+
+@import url("style.css");
