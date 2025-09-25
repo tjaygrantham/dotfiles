@@ -48,20 +48,24 @@ window#waybar.hidden {
 }
 
 #workspaces {
+  background-color: transparent;
   padding: 0;
 }
 
 #workspaces button {
-  padding: 0 5px 0 5px;
-  background-color: transparent;
-  border-radius: 15px;
+  margin: 0 5px 0 5px;
+  padding: 0 7.5px 0 7.5px;
+  background-color: @surface;
+  border-radius: 5px;
   color: @muted;
+  /* transition: none; */
   transition:
     color 0.2s ease,
     background 0.2s ease;
 }
 
 #workspaces button.active {
+  background-color: @highlightMed;
   color: @text;
 }
 
@@ -73,7 +77,7 @@ window#waybar.hidden {
 #workspaces button:hover {
   background: @highlightHigh;
   border-color: transparent;
-  border-radius: 15px;
+  /* border-radius: 15px; */
   box-shadow: inherit;
   text-shadow: inherit;
   /* transition: none; */

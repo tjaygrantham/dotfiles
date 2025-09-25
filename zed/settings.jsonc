@@ -10,24 +10,24 @@
   "base_keymap": "VSCode",
   "theme": {
     "mode": "system",
-    "dark": "Rosé Pine",
-    "light": "Rosé Pine Dawn"
+    "dark": "Rosé Pine Moon",
+    "light": "Rosé Pine Dawn",
   },
   "telemetry": {
     "diagnostics": false,
-    "metrics": false
+    "metrics": false,
   },
   "terminal": {
-    "font_family": "MesloLGS Nerd Font",
-    "font_size": 14
+    "font_family": "JetBrainsMono Nerd Font",
+    "font_size": 14,
   },
   "cursor_blink": false,
   "ui_font_size": 14,
   "buffer_font_size": 14,
   "features": {
-    "copilot": false
+    "copilot": false,
   },
   "show_copilot_suggestions": false,
   "tab_size": 2,
-  "hard_tabs": false
+  "hard_tabs": false,
 }

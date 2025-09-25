@@ -1,4 +1,5 @@
 .vscode
 lazy-lock.json
 /hypr/theme.conf
+/hypr/monitor.conf
 /wofi/colors
